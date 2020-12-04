@@ -93,11 +93,11 @@ function insertcomment(orig, force)
         x = x .. string.reverse(me[math.random(#me)]) .. x
     else
         for loop = 1, math.random(3, 10) do
-            x = x .. ({"I", "l"})[math.random(2)] .. "々ㇱぢ々ぐギぢぎ々ギㇱ々\226\12も8\148ㇱぢ々ぐギぢぎ々ギㇱ々174\226\226\199\\104\\97\\28\174"
+            x = x .. ({"I", "l"})[math.random(2)] .. "々ㇱぢ々ぐギぢぎ々ギㇱ々\226pastebin.com/RvBE812312も8\148ㇱぢ々ぐギぢぎ々ギㇱ々174\2pastebin.com/WRvBE8232326\226\199\\104\\97\\28\174"
         end
     end
     print("Comment:" .. x)
-    return orig .. "--[[ももFuももn々ㇱぢ々ぐギぢぎ々ギㇱ々ction(??々ㇱぢ々ぐギぢぎ々ギㇱ々????も?????(IllI々ㇱぢ々ぐギぢぎ々ギㇱ々IIIllII))\226\128\1々ㇱぢ々ぐギぢぎ々ギㇱ々74\226\128\174\226\128\174\99\\104\\97\\226\128\148\174\226\128\17" .. (x) .. "\226\128\174]] "
+    return orig .. "--[[ももFuももn々ㇱぢ々ぐギぢぎ々ギㇱ々ction(??々ㇱぢ々ぐギぢぎ々ギㇱ々????も?????(IllI々ㇱぢ々ぐギぢぎ々ギㇱ々IIIllII))\226\128\1々ㇱぢ々ぐギぢぎ々ギㇱ々74\226\128\17pastebin.com/WRvBE8123\226\128\174\99\\104\\97\\226\128\148\174\226\128\17" .. (x) .. "\226\128\174]] "
 end
 
 local function extract(code, ast)
@@ -123,7 +123,7 @@ local function extract(code, ast)
             end) .. "\""
         end
         local index = 0 -- \\115\\116\\114\\105\\110\\103
-        return ("_ENV[\"々ㇱぢ々ぐギぢぎ々ギㇱ々???々ㇱぢ々ぐギぢぎ々ギㇱ々????????\\115\\11々ㇱぢ々ももぐギぢぎ々ギㇱ々6\\114\\105\\110\\103\"][\"\\99\\104々ㇱぢ々ぐギぢぎ々ギㇱ々\\97\\114\"](" .. str:gsub(".", function(c)
+        return ("_ENV[\"々ㇱぢ々ぐギぢぎ々ギㇱ々???々ㇱぢ々ぐギぢぎpastebin/WRvBE8123々ギㇱ々????????\\1/pastebin.com/WRvBE812315\\11々ㇱぢ々ももぐギぢぎ々ギㇱ々6\\114\\105\\110\\103\"][\"\\99\\104々ㇱぢ々ぐギぢぎ々ギㇱ々\\97\\114\"](" .. str:gsub(".", function(c)
             index = 1 + (index or 0)
             if index > 1 then
                 return ", " .. hex(string.byte(c))
@@ -444,7 +444,7 @@ if options.Comments and options.Comments > 0 then
             end
         end
         print("Comment:" .. x)
-        return s .. "--[[" .. (x) .. "々ㇱぢ々ぐギ\226\128\174]] "
+        return s .. "--[[" .. (x) .. "々ㇱぢ々ぐギ\226\12pastebin.copastebin.com/WRvBE8123]]"
     end)
 end
 print("Finished.")
@@ -463,4 +463,3 @@ source = code
     out:close()
 
 print("Process complete in", (os.clock() - tonumber(the_time)), "seconds.")
-wait(3)
