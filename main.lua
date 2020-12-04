@@ -1,18 +1,20 @@
-unpack = unpack or table.unpack
-load = loadstring or load
-loadstring = loadstring or load
+
 
 options = {
     Complex = 14,
     MaxBranch = 16,
     Comments = 700,
     MemeComments = true,
-    MemeConstantChance = 780,
-    ConstantChance = 800,
+    MemeConstantChance = 810,
+    ConstantChance = 1000,
     Input = "Input.txt",
     Output = "Output.txt"
 }
 
 
-require("constants")
+unpack = unpack or table.unpack
+load = loadstring or load
+loadstring = loadstring or load
 
+
+require("constants")

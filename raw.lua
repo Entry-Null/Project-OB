@@ -14,11 +14,6 @@ function get(tab, num)
 end
 
 function parse(val, write)
-    if mask_strings == true then
-        return "\"" .. val:gsub(".", function(b)
-            return "\\" .. string.byte(b)
-        end) .. "\""
-    end
     if n <= max_length and not ignore_length then
         write = true
     end
@@ -26,9 +21,9 @@ function parse(val, write)
         write = false
     end
     if type(val) == "function" then
-       --[[ if val:sub(1, 1) == "<" and val:sub(-1) == ">" then -- Escape functions, etc
-            return val:sub(2, -2)]]
-        if mask_strings == true then
+        if val:sub(1, 1) == "<" and val:sub(-1) == ">" then -- Escape functions, etc
+            return val:sub(2, -2)
+        elseif mask_strings == true then
             return "\"" .. val:gsub(".", function(b)
                 return "\\" .. string.byte(b)
             end) .. "\""

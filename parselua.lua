@@ -154,7 +154,7 @@ function LexLua(src)
             --separately.
             leading = { }
             local leadingWhite = ''
-            local longStr = true
+            local longStr = false
             while true do
                 local c = peek()
                 if c == '#' and peek(1) == '!' and line == 1 then
